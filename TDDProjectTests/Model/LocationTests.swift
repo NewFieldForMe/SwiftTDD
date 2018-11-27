@@ -7,6 +7,8 @@
 //
 
 import XCTest
+import CoreLocation
+@testable import TDDProject
 
 class LocationTests: XCTestCase {
     
@@ -18,5 +20,17 @@ class LocationTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
+    }
+
+    func testInit_ShouldSetNameAndCoordinate() {
+        let testCoordinate = CLLocationCoordinate2D(latitude: 1, longitude: 2)
+        let location = Location(name: "", coordinate: testCoordinate)
+
+        XCTAssertEqual(location.coordinate?.latitude,
+                       testCoordinate.latitude,
+                       "Initializer should set latitude")
+        XCTAssertEqual(location.coordinate?.longitude,
+                       testCoordinate.longitude,
+                       "Initializer should set longitude")
     }
 }

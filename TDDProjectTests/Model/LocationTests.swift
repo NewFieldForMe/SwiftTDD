@@ -33,4 +33,10 @@ class LocationTests: XCTestCase {
                        testCoordinate.longitude,
                        "Initializer should set longitude")
     }
+
+    func testInit_ShouldSetname() {
+        let location = Location(name: "Test name")
+        XCTAssertEqual(location.name, "Test name",
+                       "Initializer should set name")
+    }
 }

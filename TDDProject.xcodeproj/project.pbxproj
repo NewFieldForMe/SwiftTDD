@@ -17,6 +17,8 @@
 		8E6B29C421AD926D00577A54 /* ToDoItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6B29C321AD926D00577A54 /* ToDoItemTests.swift */; };
 		8E6B29C621AD954A00577A54 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6B29C521AD954A00577A54 /* Location.swift */; };
 		8E6B29C821AD9A1300577A54 /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6B29C721AD9A1300577A54 /* LocationTests.swift */; };
+		92EEBC8121AECE2B0066D9B2 /* ItemManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EEBC8021AECE2B0066D9B2 /* ItemManagerTests.swift */; };
+		92EEBC8321AECFE70066D9B2 /* ItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EEBC8221AECFE70066D9B2 /* ItemManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		8E6B29C321AD926D00577A54 /* ToDoItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemTests.swift; sourceTree = "<group>"; };
 		8E6B29C521AD954A00577A54 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		8E6B29C721AD9A1300577A54 /* LocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
+		92EEBC8021AECE2B0066D9B2 /* ItemManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemManagerTests.swift; sourceTree = "<group>"; };
+		92EEBC8221AECFE70066D9B2 /* ItemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,7 @@
 			children = (
 				8E6B29C521AD954A00577A54 /* Location.swift */,
 				8E6B29C121AD925400577A54 /* ToDoItem.swift */,
+				92EEBC8221AECFE70066D9B2 /* ItemManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -120,6 +125,7 @@
 			children = (
 				8E6B29C721AD9A1300577A54 /* LocationTests.swift */,
 				8E6B29C321AD926D00577A54 /* ToDoItemTests.swift */,
+				92EEBC8021AECE2B0066D9B2 /* ItemManagerTests.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -226,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E6B29A321AD7D3900577A54 /* ViewController.swift in Sources */,
+				92EEBC8321AECFE70066D9B2 /* ItemManager.swift in Sources */,
 				8E6B29A121AD7D3900577A54 /* AppDelegate.swift in Sources */,
 				8E6B29C621AD954A00577A54 /* Location.swift in Sources */,
 				8E6B29C221AD925400577A54 /* ToDoItem.swift in Sources */,
@@ -238,6 +245,7 @@
 			files = (
 				8E6B29C421AD926D00577A54 /* ToDoItemTests.swift in Sources */,
 				8E6B29C821AD9A1300577A54 /* LocationTests.swift in Sources */,
+				92EEBC8121AECE2B0066D9B2 /* ItemManagerTests.swift in Sources */,
 				8E6B29B621AD7D3A00577A54 /* TDDProjectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

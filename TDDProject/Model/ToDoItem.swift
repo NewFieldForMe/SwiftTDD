@@ -21,3 +21,12 @@ struct ToDoItem {
         self.location = location
     }
 }
+
+extension ToDoItem: Equatable {
+    static func == (lhs: ToDoItem, rhs: ToDoItem) -> Bool {
+        if lhs.location?.name == rhs.location?.name {
+            return true
+        }
+        return false
+    }
+}

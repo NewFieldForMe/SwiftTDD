@@ -49,20 +49,32 @@ class LocationTests: XCTestCase {
     func testWhenLatitudeDiffers_ShouldBeNotEqual() {
         performNotEqualTestWithLocationProperties(firstName: "Home",
                                                   secondName: "Home",
-                                                  firstLongLat: (0.0, 0.0),
-                                                  secondLongLat: (0.0, 1.0))
+                                                  firstLongLat: (1.0, 0.0),
+                                                  secondLongLat: (0.0, 0.0))
     }
 
     func testWhenLongitudeDiffers_ShouldBeNotEqual() {
-        let firstLocation = Location(name: "Home",
-                                     coordinate: CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0))
-        let secondLocation = Location(name: "Home",
-                                      coordinate: CLLocationCoordinate2D(latitude: 1.0, longitude: 1.0))
-        XCTAssertNotEqual(firstLocation, secondLocation)
-
+        performNotEqualTestWithLocationProperties(firstName: "Home",
+                                                  secondName: "Home",
+                                                  firstLongLat: (0.0, 1.0),
+                                                  secondLongLat: (0.0, 0.0))
     }
 
-    func performNotEqualTestWithLocationProperties (firstName: String, secondName: String, firstLongLat: (Double, Double)?, secondLongLat: (Double, Double)?) {
+    func testWhenOneHasCoordinateAndTheOtherDoesnt_ShouldBeNotEqual() {
+        performNotEqualTestWithLocationProperties(firstName: "Home",
+                                                  secondName: "Home",
+                                                   firstLongLat: (0.0, 0.0),
+                                                  secondLongLat: nil)
+    }
+
+    func testWhenNameDifferes_ShouldBeNotEqual() {
+        performNotEqualTestWithLocationProperties(firstName: "Home",
+                                                  secondName: "Office",
+                                                  firstLongLat: nil,
+                                                  secondLongLat: nil)
+    }
+
+    func performNotEqualTestWithLocationProperties (firstName: String, secondName: String, firstLongLat: (Double, Double)?, secondLongLat: (Double, Double)?, line: UInt = #line) {
         let firstCoord: CLLocationCoordinate2D?
         if let firstLongLat = firstLongLat {
             firstCoord = CLLocationCoordinate2D(latitude: firstLongLat.0, longitude: firstLongLat.1)
@@ -81,6 +93,6 @@ class LocationTests: XCTestCase {
         }
         let secondLocation = Location(name: secondName,
                                       coordinate: secondCoord)
-        XCTAssertNotEqual(firstLocation, secondLocation)
+        XCTAssertNotEqual(firstLocation, secondLocation, line: line)
     }
 }

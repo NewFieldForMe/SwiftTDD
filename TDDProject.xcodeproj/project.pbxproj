@@ -17,6 +17,8 @@
 		8E6B29C421AD926D00577A54 /* ToDoItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6B29C321AD926D00577A54 /* ToDoItemTests.swift */; };
 		8E6B29C621AD954A00577A54 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6B29C521AD954A00577A54 /* Location.swift */; };
 		8E6B29C821AD9A1300577A54 /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6B29C721AD9A1300577A54 /* LocationTests.swift */; };
+		920227D621B41FBE005EFC96 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920227D521B41FBE005EFC96 /* ItemListViewController.swift */; };
+		920227D821B41FF6005EFC96 /* ItemListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920227D721B41FF6005EFC96 /* ItemListViewControllerTests.swift */; };
 		92EEBC8121AECE2B0066D9B2 /* ItemManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EEBC8021AECE2B0066D9B2 /* ItemManagerTests.swift */; };
 		92EEBC8321AECFE70066D9B2 /* ItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EEBC8221AECFE70066D9B2 /* ItemManager.swift */; };
 /* End PBXBuildFile section */
@@ -46,6 +48,8 @@
 		8E6B29C321AD926D00577A54 /* ToDoItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemTests.swift; sourceTree = "<group>"; };
 		8E6B29C521AD954A00577A54 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		8E6B29C721AD9A1300577A54 /* LocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
+		920227D521B41FBE005EFC96 /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
+		920227D721B41FF6005EFC96 /* ItemListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewControllerTests.swift; sourceTree = "<group>"; };
 		92EEBC8021AECE2B0066D9B2 /* ItemManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemManagerTests.swift; sourceTree = "<group>"; };
 		92EEBC8221AECFE70066D9B2 /* ItemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +93,7 @@
 		8E6B299F21AD7D3800577A54 /* TDDProject */ = {
 			isa = PBXGroup;
 			children = (
+				920227D421B41FAE005EFC96 /* ViewController */,
 				8E6B29C021AD924200577A54 /* Model */,
 				8E6B29A021AD7D3900577A54 /* AppDelegate.swift */,
 				8E6B29A221AD7D3900577A54 /* ViewController.swift */,
@@ -103,6 +108,7 @@
 		8E6B29B421AD7D3A00577A54 /* TDDProjectTests */ = {
 			isa = PBXGroup;
 			children = (
+				920227D121B41F6C005EFC96 /* ViewController */,
 				8E6B29C921AD9A3900577A54 /* Model */,
 				8E6B29B521AD7D3A00577A54 /* TDDProjectTests.swift */,
 				8E6B29B721AD7D3A00577A54 /* Info.plist */,
@@ -128,6 +134,22 @@
 				92EEBC8021AECE2B0066D9B2 /* ItemManagerTests.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		920227D121B41F6C005EFC96 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				920227D721B41FF6005EFC96 /* ItemListViewControllerTests.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		920227D421B41FAE005EFC96 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				920227D521B41FBE005EFC96 /* ItemListViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +258,7 @@
 				8E6B29A121AD7D3900577A54 /* AppDelegate.swift in Sources */,
 				8E6B29C621AD954A00577A54 /* Location.swift in Sources */,
 				8E6B29C221AD925400577A54 /* ToDoItem.swift in Sources */,
+				920227D621B41FBE005EFC96 /* ItemListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				920227D821B41FF6005EFC96 /* ItemListViewControllerTests.swift in Sources */,
 				8E6B29C421AD926D00577A54 /* ToDoItemTests.swift in Sources */,
 				8E6B29C821AD9A1300577A54 /* LocationTests.swift in Sources */,
 				92EEBC8121AECE2B0066D9B2 /* ItemManagerTests.swift in Sources */,

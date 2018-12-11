@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E6837B221BF63DD00EC39CC /* ItemListDataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6837B121BF63DD00EC39CC /* ItemListDataProviderTests.swift */; };
 		8E6B29A121AD7D3900577A54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6B29A021AD7D3900577A54 /* AppDelegate.swift */; };
 		8E6B29A621AD7D3900577A54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E6B29A421AD7D3900577A54 /* Main.storyboard */; };
 		8E6B29A821AD7D3A00577A54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E6B29A721AD7D3A00577A54 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E6837B121BF63DD00EC39CC /* ItemListDataProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListDataProviderTests.swift; sourceTree = "<group>"; };
 		8E6B299D21AD7D3800577A54 /* TDDProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDDProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E6B29A021AD7D3900577A54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E6B29A521AD7D3900577A54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				920227D721B41FF6005EFC96 /* ItemListViewControllerTests.swift */,
+				8E6837B121BF63DD00EC39CC /* ItemListDataProviderTests.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				920227D821B41FF6005EFC96 /* ItemListViewControllerTests.swift in Sources */,
 				8E6B29C421AD926D00577A54 /* ToDoItemTests.swift in Sources */,
 				8E6B29C821AD9A1300577A54 /* LocationTests.swift in Sources */,
+				8E6837B221BF63DD00EC39CC /* ItemListDataProviderTests.swift in Sources */,
 				92EEBC8121AECE2B0066D9B2 /* ItemManagerTests.swift in Sources */,
 				8E6B29B621AD7D3A00577A54 /* TDDProjectTests.swift in Sources */,
 			);

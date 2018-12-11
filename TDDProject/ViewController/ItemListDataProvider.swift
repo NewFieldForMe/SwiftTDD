@@ -12,23 +12,30 @@ class ItemListDataProvider: NSObject {
     var itemManager: ItemManager?
 }
 
+enum Section: Int {
+    case ToDo
+    case Done
+}
+
 extension ItemListDataProvider: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let itemManager = itemManager else { return 0 }
+        guard let itemSection = Section(rawValue: section) else { return 0 }
+
         let numberOfRows: Int
-        switch section {
-        case 0:
-            numberOfRows = itemManager?.toDoCount ?? 0
-        case 1:
-            numberOfRows = itemManager?.doneCount ?? 0
-        default:
-            numberOfRows = 0
+        switch itemSection {
+        case .ToDo:
+            numberOfRows = itemManager.toDoCount
+        case .Done:
+            numberOfRows = itemManager.doneCount
         }
 
         return numberOfRows
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath)
+        return cell
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {

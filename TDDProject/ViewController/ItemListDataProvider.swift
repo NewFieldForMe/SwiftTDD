@@ -55,3 +55,28 @@ extension ItemListDataProvider: UITableViewDataSource {
         return 2
     }
 }
+
+extension ItemListDataProvider: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        guard let section = Section(rawValue: indexPath.section) else { fatalError() }
+
+        switch section {
+        case .ToDo:
+            return "Check"
+        case .Done:
+            return "Uncheck"
+        }
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        guard let itemManager = itemManager, let section = Section(rawValue: indexPath.section) else { fatalError() }
+
+        switch section {
+        case .ToDo:
+            itemManager.checkItemAtIndex(indexPath.row)
+        case .Done:
+            itemManager.uncheckItemAtIndex(indexPath.row)
+        }
+        tableView.reloadData()
+    }
+}

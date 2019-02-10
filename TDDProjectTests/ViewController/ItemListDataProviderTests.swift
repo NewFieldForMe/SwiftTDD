@@ -10,16 +10,21 @@ import XCTest
 @testable import TDDProject
 
 class ItemListDataProviderTests: XCTestCase {
+    var controller: ItemListViewController!
     var sut: ItemListDataProvider!
     var tableView: UITableView!
-    
+
     override func setUp() {
         super.setUp()
 
         sut = ItemListDataProvider()
         sut.itemManager = ItemManager()
 
-        tableView = UITableView()
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        controller = storyBoard.instantiateViewController(withIdentifier: "ItemListViewController") as? ItemListViewController
+        _ = controller.view
+
+        tableView = controller.tableView
         tableView.dataSource = sut
     }
     

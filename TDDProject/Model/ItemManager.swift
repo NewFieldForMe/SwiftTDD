@@ -29,6 +29,11 @@ class ItemManager {
         doneItems.append(item)
     }
 
+    func uncheckItemAtIndex(_ index: Int) {
+        let item = doneItems.remove(at: index)
+        todoItems.append(item)
+    }
+
     func doneItemAtIndex(_ index: Int) -> ToDoItem {
         return doneItems[index]
     }
